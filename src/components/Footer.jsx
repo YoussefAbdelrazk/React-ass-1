@@ -5,7 +5,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 export default function Footer() {
   return (
-    <div className=' bg-[#2c3e50] p-4 mt-24'>
+    <div className=' bg-[#2c3e50] p-4 '>
         <div className='max-w-5xl mx-auto flex flex-col space-y-20 md:space-y-0 md:flex-row text-white items-center justify-between py-12'>
 
           <div className=' space-y-4'>

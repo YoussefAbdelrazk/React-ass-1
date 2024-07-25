@@ -1,24 +1,30 @@
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Portfolio from "./components/Portfolio"
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
-import LastFooter from "./components/LastFooter"
 
+
+
+
+
+import { createBrowserRouter } from "react-router-dom"
+
+import { Hero,Portfolio,About,Contact ,Home} from './pages'
+import { RouterProvider } from "react-router-dom"
+
+const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<Hero/>,
+    children:[
+      {index:true, element:<Home/>},
+      {path:'about',element:<About/>},
+      {path:'contact',element:<Contact/>},
+      {path:'portfolio',element:<Portfolio/>},
+    ]
+  },
+])
 
 function App() {
 
 
-  return <>
-  <Navbar/>
-  <Hero/>
-  <Portfolio />
-  <About/>
-  <Contact/>
-  <Footer/>
-  <LastFooter/>
-  </>
+  return <RouterProvider router={router}/>
 }
 
 export default App

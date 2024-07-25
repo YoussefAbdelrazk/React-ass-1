@@ -2,7 +2,7 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 export default function About() {
   return (
-    <section id="About" className="bg-[#1abc9c] p-6 my-20 ">
+    <section id="About" className="bg-[#1abc9c] h-screen flex items-center justify-center   ">
       <div className="max-w-6xl mx-auto ">
       <h1 className="text-center text-6xl font-bold text-white">ABOUT</h1>
       <div className="inline-flex  items-center justify-center w-full ">

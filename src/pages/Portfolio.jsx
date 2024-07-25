@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import { FaStar } from "react-icons/fa";
-import Card from "./Card";
+import Card from "../components/Card";
 
 import img1 from '../assets/cabin.4417330275f78faa31c3.png'
 import img2 from '../assets/cake.6554473016d32b343f02.png'

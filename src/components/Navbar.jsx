@@ -2,22 +2,24 @@
 import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { FaTimes } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 const links = [
-  {id:1,title:'Portfolio',href:'#Portfolio'},
-  {id:2,title:'About',href:'#About'},
-  {id:3,title:'Contact',href:'#Contact'},
+  {id:1,title:'Home',href:'/'},
+  {id:2,title:'Portfolio',href:'portfolio'},
+  {id:3,title:'About',href:'about'},
+  {id:4,title:'Contact',href:'contact'},
 ]
 const Navbar = () => {
   const[nav,setNav]=useState(false)
   return (
-    <div className=" bg-[#2c3e50] p-6    " >
+    <div className=" bg-[#2c3e50] p-6  z-[990]    " >
       <div className="max-w-screen-lg mx-auto p-3 flex justify-between items-center">
         <h2 className=" uppercase text-3xl text-white font-bold">Start React</h2>
         <ul className=" hidden md:flex space-x-10">
           {links.map((link)=>{
             const {id,title,href}=link;
             return <li  className="text-2xl font-bold text-white hover:text-[#1abc9c] cursor-pointer duration-300" key={id}>
-              <a href={href}>{title}</a>
+              <NavLink to={href}>{title}</NavLink>
             </li>
           })}
         </ul>
@@ -30,7 +32,7 @@ const Navbar = () => {
           {links.map((link)=>{
             const {id,title,href}=link;
             return <li className="text-2xl font-bold text-[#2c3e50] hover:text-[#1abc9c] cursor-pointer duration-300" key={id}>
-              <a href={href}>{title}</a>
+              <NavLink to={href}>{title}</NavLink>
             </li>
           })}
         </ul>
